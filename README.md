@@ -1,9 +1,4 @@
-# eBPF
-Learning eBPF
-
-**Username:** ebpf-test
-**Password:** ebpf-test123!
-**OS:** Ubuntu Linux 22.04 LTS x64
+# Learning eBPF
 
 ## Table of Contents
 - How to run eBPF code?
