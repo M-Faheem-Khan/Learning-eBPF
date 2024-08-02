@@ -12,4 +12,4 @@ Using the `execve` syscall to monitor for all newly executed program & gather de
 ```
 PID  UID  FILE    ARGS
 2132 1000 /bin/ls -la --color=auto
-``
+```
