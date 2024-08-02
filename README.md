@@ -4,10 +4,6 @@
 - How to run eBPF code?
 	- Manually Register eBPF bytecode in Kernel
 	- Automate eBPF bytecode Kernel registration & clean up
-- Hello World
-- Process Monitor
-	- Process Details
-	- System Calls
 - Resources
 
 # How to run eBPF code?
