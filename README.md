@@ -128,53 +128,6 @@ clang -Wall -O2 -g hello.o libbpf/build/libbpf.a -lelf -lz -o runner
 # Run the runner
 sudo ./runner
 ```
-# Hello World
-
-The following code prints Hello World to the logs when ever an new program is executed.
-
-```C
-#include <linux/bpf.h>
-#include <bpf/bpf_helpers.h>
-
-// execve - syscall is made whenever a program is executed.
-SEC("tracepoint/syscalls/sys_enter_execve")
-int tracepoint__syscalls__sys_enter_execve(strcut trace_event_raw_sys_enter *ctx) {
-	bpf_printk("Hello World\n");
-	return 0;
-}
-
-// Define License - Only GPL is accepted.
-char LICENSE[] SEC("license") = "GPL";
-
-```
-
-**Build**
-Using `clang` to generate the ebpf bytecode.
-`clang -target bpf -Wall -O2 -g -c HelloWorld.bpf.c -o HelloWorld.o`
-
-**View compiled bytecode**
-`llvm-objdump -d -r -S --print-imm-hex HelloWorld.o`
-
-**Load Bytecode into Kernel**
-`bpftool prog load HelloWorld.o /sys/fs/bpf/HelloWorld type raw_tracepoint`
-
-**Testing**
-`bpftool prog run pinned /sys/fs/bpf/HelloWorld repeat 0`
-
-**View Logs**
-`sudo cat /sys/kernel/debug/tracing/trace`
-# Process Monitor
-**Goal:** Write a eBPF program that lists the `path`, `pid`, `args` of any executed program.
-
-
-**Syscall:** `execve` [manpage](https://man7.org/linux/man-pages/man2/execve.2.html)
-*executes the program referred to by _pathname_.  This causes the program that is currently being run by the calling process to be replaced with a new program, with newly initialized stack, heap, and (initialized and uninitialized) data segments.*
-
-
-Using the `execve` syscall to monitor for all newly executed program and use it to gather and display information about the program.
-## Process Details
-
-## Systems Calls
 
 
 
