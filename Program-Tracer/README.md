@@ -1,8 +1,6 @@
 # Program Tracer  
 
-**[Work In Progress]**
-
-**Goal:** Write a eBPF program that lists the `path`, `pid`, `args` of any executed program.  
+**Goal:** Write a eBPF program that lists the `path`, `pid` of any executed program.  
 
 **Syscall:** `execve` [manpage](https://man7.org/linux/man-pages/man2/execve.2.html)
 *executes the program referred to by _pathname_.  This causes the program that is currently being run by the calling process to be replaced with a new program, with newly initialized stack, heap, and (initialized and uninitialized) data segments.*  
