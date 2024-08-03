@@ -10,6 +10,6 @@
 Using the `execve` syscall to monitor for all newly executed program & gather details and display information about the program.
 
 ```
-PID  UID  FILE    ARGS
-2132 1000 /bin/ls -la --color=auto
+path=/usr/bin/which, name=sh, uid=3949, pid=3949
+path=/usr/bin/sed, name=cpuUsage.sh, uid=3954, pid=3954
 ```
