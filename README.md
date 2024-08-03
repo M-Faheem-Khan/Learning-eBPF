@@ -2,6 +2,8 @@
 
 Notes for learning eBPF. 
 
+[How to run eBPF?](./how-to-run.md)
+
 
 # Resources
 - [https://github.com/sartura/ebpf-hello-world](https://github.com/sartura/ebpf-hello-world)
