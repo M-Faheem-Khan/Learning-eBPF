@@ -7,7 +7,12 @@
 
 Using the `execve` syscall to monitor for all newly executed program & gather details and display information about the program.
 
+name -> Parent programm
+path -> Path of program being executed
+
 ```
 path=/usr/bin/which, name=sh, uid=3949, pid=3949
 path=/usr/bin/sed, name=cpuUsage.sh, uid=3954, pid=3954
 ```
+
+
