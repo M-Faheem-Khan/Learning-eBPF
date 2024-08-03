@@ -7,8 +7,8 @@
 
 Using the `execve` syscall to monitor for all newly executed program & gather details and display information about the program.
 
-name -> Parent programm
-path -> Path of program being executed
+**name:** Parent program  
+**path:** Path of program being executed  
 
 ```
 path=/usr/bin/which, name=sh, uid=3949, pid=3949
